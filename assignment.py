@@ -9,7 +9,7 @@ msg = MIMEMultipart()
 msg['From'] = fromaddr 
 msg['To'] = userid
 msg['Subject'] = "SET MY TEST"
-body = 'Dear ' +username+ ' Welcome to our app'
+body = 'Dear ' +username+ ',Welcome to our app'
     
 msg.attach(MIMEText(body, 'plain'))
     
