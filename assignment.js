@@ -5,6 +5,7 @@ var spawn=require('child_process').spawn;
 const {url}=require('./exports')
 const {pass}=require('./exports')
 const {id}=require('./exports')
+var port = process.env.PORT || 3000
 firebase.initializeApp({
     databaseURL:url,
     credential:firebase.credential.cert('set-my-test-cc6c9-9f3daa9c7b18.json')
@@ -33,6 +34,6 @@ app.post('/info',(req,res)=>{
     res.redirect('/')
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('listening at http://localhost:3000')
 })
