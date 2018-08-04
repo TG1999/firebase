@@ -4,6 +4,7 @@ const app=express();
 var spawn=require('child_process').spawn;
 const {url}=require('./exports')
 const {pass}=require('./exports')
+const {id}=require('./exports')
 firebase.initializeApp({
     databaseURL:url,
     credential:firebase.credential.cert('set-my-test-cc6c9-9f3daa9c7b18.json')
@@ -28,7 +29,7 @@ app.post('/info',(req,res)=>{
         username:username,
         userid:userid
     })
-    var proc=spawn('python',['./assignment.py',username,userid,pass]);
+    var proc=spawn('python',['./assignment.py',username,userid,pass,id]);
     res.redirect('/')
 })
 

@@ -4,7 +4,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 userid=sys.argv[2]
 username=sys.argv[1]
-fromaddr = "tushar.goel.dav@gmail.com"
+fromaddr = sys.argv[4]
 msg = MIMEMultipart() 
 msg['From'] = fromaddr 
 msg['To'] = userid
